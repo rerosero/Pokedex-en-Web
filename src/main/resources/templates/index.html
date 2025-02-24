@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="/image/iconopoke.ico">
+    <!-- Enlace con CSS -->
+    <link rel="stylesheet" href="/css/main.css?v=1">
+    <!-- Cargar Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="imagen">
+    <!-- Título principal con el logo -->
+    <div id="titulo">
+        Pokémon
+        <img src="/image/icono.png" alt="Logo de Pokémon" class="logo-titulo">
+    </div>
+
+    <!-- Contenedor general para alinear los elementos -->
+    <div class="cuerpo-flex">
+        <!-- Contenedor de imágenes giratorias -->
+        <div id="imagen2-container">
+            <div class="imagen-giratoria" style="background-image: url('/image/pokemon.jpeg');"></div>
+            <div class="imagen-giratoria" style="background-image: url('/image/pokemon2.jpg');"></div>
+            <div class="imagen-giratoria" style="background-image: url('/image/epic2.jpg');"></div>
+            <div class="imagen-giratoria" style="background-image: url('/image/epic3.jpg');"></div>
+        </div>
+
+        <!-- Cuadro de información con transparencia -->
+        <div class="info-box">
+            <h2>Pokeinformación</h2>
+            <p>Explora la información de los Pokémon y descubre sus habilidades y estadísticas.</p>
+        </div>
+
+        <!-- Contenedor de la imagen -->
+        <img id="pokemonImagen" src="" alt="Imagen del Pokémon"/>
+
+        <!-- Cuadro para los nuevos detalles -->
+        <div id="additionalDetails">
+            <p><strong>Tipos:</strong> <span id="types"></span></p>
+            <p><strong>Habilidades:</strong> <span id="abilities"></span></p>
+            <p><strong>Generación:</strong> <span id="generation"></span></p>
+            <p><strong>Hábitat:</strong> <span id="habitat"></span></p>
+        </div>
+
+        <div class="container">
+            <!-- Subcontenedor para listas desplegables -->
+            <div class="listas-contenedor">
+                <!-- Lista Desplegable -->
+                <label for="pokemonSelect">Selecciona un Pokémon:</label>
+                <select id="pokemonSelect">
+                    <option value="">Seleccionar Pokémon</option>
+                </select>
+
+                <!-- Campo de búsqueda por ID como lista desplegable -->
+                <label for="searchInput">Buscar Pokémon por ID:</label>
+                <select id="searchInput">
+                    <option value="">Selecciona un ID </option>
+                </select>
+            </div>
+
+            <!-- Aquí se mostrarán los detalles del Pokémon seleccionado -->
+            <div id="pokemonDetails">
+                <h3>Detalles del Pokémon:</h3>
+                <p><strong>Nombre:</strong> <span id="name"></span></p>
+                <p><strong>Altura:</strong> <span id="height"></span></p>
+                <p><strong>Peso:</strong> <span id="weight"></span></p>
+                <p><strong>Especie:</strong> <span id="species"></span></p>
+                <p><strong>Descripción: </strong> <span id="description"></span></p>
+
+                <!-- Agregar más detalles aquí -->
+                <canvas id="statsChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabla de Pokémon -->
+<div class="cuerpo-flex2">
+    <h4>Tabla de todos los Pokémones</h4>
+    <table id="pokemon-table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Descripción</th>
+            <th>PokeImagen</th>
+            <th>HP</th>
+            <th>Ataque</th>
+            <th>Defensa</th>
+            <th>Velocidad</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Aquí se llenarán las filas con los Pokémon -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Enlace al archivo JavaScript -->
+<script src="/js/main.js"></script>
+</body>
+</html>

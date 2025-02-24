@@ -1,0 +1,328 @@
+/* main.css */
+/* Reglas generales para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el padding (relleno) predeterminado de todos los elementos */
+    box-sizing: border-box; /* Asegura que el tamaño de los elementos incluya el borde y el padding, evitando desbordamientos inesperados */
+}
+
+/* Estilos para el elemento con id "imagen" */
+#imagen {
+    background-image: url('../image/fondo.jpg'); /* Establece una imagen de fondo en el contenedor */
+    background-size: cover; /* Asegura que la imagen cubra sin distorsionarse */
+    background-position: center; /* Centra la imagen de fondo tanto vertical como horizontalmente */
+    height: 100vh; /* Establece que el alto del elemento sea el 100% de la altura de la ventana del navegador */
+    width: 100%; /* Hace que el ancho del elemento sea el 100% del contenedor padre */
+}
+
+/* Estilos para el elemento con id "titulo" */
+#titulo {
+    width: 100%; /* Establece que el ancho del título ocupe todo el contenedor */
+    height: 50px; /* Establece una altura fija de 50px para el título */
+    font-family: "Bodoni MT Black", serif; /* Usa la fuente "Bodoni MT Black" para el texto del título */
+    font-size: 48px; /* Establece el tamaño de la fuente en 38px */
+    font-variant-position: normal; /* Usa la variante normal de la fuente (sin aplicar ningún estilo especial) */
+    background-image: radial-gradient(circle at 50% 50%, #e38293 0, #d67c93 8.33%, #c57490 16.67%, #b16c8a 25%, #9a6281 33.33%,
+    #815673 41.67%, #674962 50%, #4f3c50 58.33%, #3b303f 66.67%, #2c2630 75%, #201e24 83.33%, #171719 91.67%, #111110 100%);
+    /* Crea un degradado radial como fondo del título, con colores que van del rosa a tonos más oscuros */
+    display: flex; /* Usa Flexbox para alinear el contenido dentro del título */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: #fffdfe; /*color para el titulo*/
+    position: relative; /* Necesario para posicionar el logo en el contenedor */
+}
+
+/* Estilos para el logo dentro del título */
+.logo-titulo {
+    position: absolute; /* Permite posicionar el logo en una ubicación específica */
+    top: 50%; /* Centra el logo verticalmente en el contenedor */
+    left: 10px; /* Mueve el logo hacia la derecha con un espacio de 10px */
+    transform: translateY(-50%); /* Alinea el logo verticalmente de forma más precisa */
+    height: 40px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Contenedor general para organizar los elementos */
+.cuerpo-flex{
+    display: flex; /* Activa flexbox */
+    justify-content: flex-start; /* Alinea a las imágenes a la izquierda */
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 100%; /* Ancho completo */
+    padding: 20px;
+}
+
+/* Estilos para el cuadro con texto (info-box) */
+.info-box {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    text-align: center; /* Texto centrado */
+    width: 600px; /* Ancho del cuadro */
+    margin-top: -500px; /* Quitar espacio encima del cuadro */
+    position: relative; /* Permite mover el cuadro relativo a su posición original */
+    left: 5.5cm; /* Mueve el cuadro 1 cm hacia la derecha */
+}
+
+/* Estilos para el título dentro del cuadro */
+.info-box h2 {
+    font-size: 24px;
+    color: #9a6281;
+}
+
+/* Estilos para el párrafo dentro del cuadro */
+.info-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para el contenedor de la imagen */
+#imagen2-container {
+    display: flex; /* Mantiene las imágenes en fila */
+    flex-direction: column; /* Establece una disposición vertical */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+/* Imágenes giratorias */
+.imagen-giratoria {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Hace las imágenes redondas */
+    border: 3px solid white;
+    opacity: 0.8;
+    animation: girar 10s linear infinite; /* Animación de giro */
+}
+
+/* Animación de giro */
+/*@keyframes girar {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}*/
+
+/* Estilo para la etiqueta de la lista desplegable (label) */
+
+
+/* Cambia el color del borde cuando el usuario enfoca la lista desplegable */
+#pokemonSelect:focus {
+    border-color: #370b53;             /* Color morado para mostrar que está seleccionado */
+    outline: none;                     /* Eliminamos el borde azul predeterminado del navegador */
+}
+/* Contenedor para las listas desplegables */
+.listas-contenedor {
+    display: flex;                        /* Activa Flexbox */
+    flex-direction: row;                  /* Alinea los elementos horizontalmente */
+    gap: 20px;                            /* Espacio entre las listas */
+    justify-content: center;              /* Centra los elementos horizontalmente */
+    align-items: center;                  /* Centra los elementos verticalmente */
+    margin: 20px 0;                       /* Margen superior e inferior */
+}
+
+/* Estilo para las etiquetas */
+label {
+    font-size: 16px;                      /* Tamaño de la fuente */
+    font-weight: bold;                    /* Texto en negrita */
+    color: #ffffff;                       /* Color del texto */
+    margin-bottom: 5px;                   /* Espaciado entre la etiqueta y la lista desplegable */
+}
+
+/* Estilo general para las listas desplegables */
+select {
+    padding: 10px;                        /* Espaciado interno */
+    font-size: 14px;                      /* Tamaño de fuente */
+    border: 1px solid #ccc;               /* Borde gris suave */
+    border-radius: 5px;                   /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco */
+    width: 200px;                         /* Ancho fijo para las listas */
+    text-align: center;                   /* Centra el texto dentro de la lista */
+    cursor: pointer;                      /* Cambia el cursor al pasar sobre la lista */
+    transition: all 0.3s ease-in-out;     /* Animación para hover */
+}
+
+/* Hover sobre las listas desplegables */
+select:hover {
+    border-color: #007bff;                /* Cambia el color del borde al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+/* Opcional: Ajuste de estilo para el contenedor general */
+.container {
+    display: flex;                        /* Activa Flexbox */
+    flex-direction: column;               /* Alinea los elementos verticalmente */
+    align-items: center;                  /* Centra los elementos horizontalmente */
+    gap: 10px;                            /* Espaciado entre los elementos del contenedor */
+    margin: 10px;                         /* Margen externo */
+}
+
+
+/* Estilo para los detalles del Pokémon */
+#pokemonDetails {
+    background: rgba(243, 243, 243, 0.9); /* Fondo semi-transparente */
+    padding: 20px;                        /* Espaciado interno */
+    border-radius: 10px;                  /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    width: 80%;                           /* Ajustar al ancho del contenedor */
+    text-align: left;                     /* Alinear texto a la izquierda */
+    color: #333;                          /* Color de texto */
+}
+
+/* Canvas del gráfico */
+canvas {
+    margin-top: 20px;                     /* Separar el gráfico de otros detalles */
+    max-width: 100%;                      /* Hacer que el gráfico sea responsivo */
+}
+
+
+/*Pokemon imagen */
+#pokemonImagen{
+    width:250px !important;  /* Asegura que la imagen no se expanda más de lo necesario */
+    height:250px!important; /* Asegura que la imagen no se expanda más de lo necesario */
+   /* margin-left: auto;*/
+    margin-right: 7px;
+    display: block;                        /* Cambia el display a flex, permitiendo un control más preciso del alineado */
+    position: relative;
+}
+
+/* Estilo para el área donde se mostrarán los detalles del Pokémon */
+#pokemonDetails {
+    display: flex;                      /* Usamos flexbox para alinear los detalles */
+    flex-direction: column;             /* Los detalles se alinean de arriba hacia abajo */
+    align-items: flex-start;            /* Alineamos los elementos hacia la izquierda */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;                      /* Añadimos espacio interno para que no se vean apretados */
+    border-radius: 10px;                /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    width: 600px;                       /* Ancho fijo para que los detalles se vean organizados */
+    position: relative;                 /* Permite mover el cuadro relativo a su posición original */
+    rigth: 2cm;                         /* Mueve el cuadro 2 cm hacia la derecha */
+    text-align: justify;                 /* Texto centrado */
+    margin-top: 10px;
+}
+
+
+/* Títulos dentro de los detalles del Pokémon */
+#pokemonDetails h2 {
+    font-size: 24px;                  /* Aumentamos el tamaño del título para que se destaque */
+    margin-bottom: 10px;               /* Separación con el siguiente detalle */
+}
+
+/* Texto de los detalles */
+#pokemonDetails p {
+    color: #555;
+    font-size: 18px;                  /* Tamaño de fuente adecuado para leer los detalles */
+    margin: 5px 0;                    /* Espacio entre las líneas de los detalles */
+}
+
+/* Título de la sección de estadísticas */
+#pokemonDetails h3 {
+    font-size: 20px;                  /* Título de estadísticas ligeramente más grande */
+    margin-top: 20px;                 /* Separación con los detalles anteriores */
+    color:  #9a6281;;                      /* Un color de texto oscuro para buena legibilidad */
+}
+/* Estilo para el cuadro con los nuevos detalles */
+#additionalDetails {
+    background-color: rgb(227, 130, 147,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 850px;
+    margin-top: 400px; /* Aumenta el valor para moverlo más abajo */
+    display: block;
+    position: relative;
+    right: 5cm;
+}
+
+/* Si deseas separar los detalles en líneas más visibles */
+#additionalDetails p {
+    margin-bottom: 10px; /* Espaciado entre los párrafos */
+}
+
+#additionalDetails strong {
+    color: #333; /* Color más oscuro para los títulos */
+}
+
+/* ---------------------- Estilo para el gráfico ---------------------- */
+
+/* Contenedor donde va a ir el gráfico */
+#chartContainer {
+    margin-top: 80px;                 /* Espacio superior para separar el gráfico de los detalles */
+    width: 90%;                       /* El gráfico ocupa el 80% del ancho de su contenedor */
+    max-width: 600px;                 /* Limite el tamaño máximo a 600px para no hacerlo demasiado grande */
+}
+
+/* Estilo del canvas donde se renderiza el gráfico */
+#statsChart {
+    width: 100%;                      /* El gráfico ocupará el ancho disponible */
+    height: 300px;                    /* Altura fija para el gráfico */
+    border-radius: 10px;              /* Bordes redondeados para que el gráfico no tenga bordes duros */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de profundidad */
+}
+#pokemon-table {
+    width: 90%; /* Tabla ocupa el 90% del contenedor */
+    margin: 20px auto; /* Centrada horizontalmente */
+    border-collapse: collapse; /* Combina bordes */
+}
+
+/* Estilo para el título de la tabla */
+.cuerpo-flex2 h4 {
+    text-align: center;           /* Centra el título horizontalmente */
+    font-size: 28px;              /* Ajusta el tamaño de la fuente */
+    color: #111110;               /* Cambia el color del texto (tonos oscuros elegantes) */
+    margin-bottom: 20px;          /* Agrega espacio debajo del título */
+    font-weight: bold;            /* Pone el texto en negrita */
+    text-transform: uppercase;    /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px;          /* Espacia ligeramente las letras */
+    background-image: radial-gradient(circle at 50% 50%, #e38293 0, #d67c93 8.33%, #c57490 16.67%, #b16c8a 25%, #9a6281 33.33%,
+    #815673 41.67%, #674962 50%, #4f3c50 58.33%, #3b303f 66.67%, #2c2630 75%, #201e24 83.33%, #171719 91.67%, #111110 100%);
+    /* Crea un degradado radial como fondo del título, con colores que van del rosa a tonos más oscuros */
+    padding: 10px;                /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Cabeceras de la tabla */
+#pokemon-table th {
+    background-color: #9a6281; /* Fondo de las cabeceras */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Celdas de la tabla */
+#pokemon-table td {
+    padding: 5px; /* Reducir padding para dar más espacio para las imágenes */
+    text-align: center; /* Centra el contenido de las celdas */
+    vertical-align: middle; /* Alineación vertical centrada */
+    width: 30px; /* Especificar un ancho fijo para las celdas */
+    height: 30px; /* Especificar una altura fija para las celdas */
+}
+
+/* Estilo para las filas alternas */
+#pokemon-table tr:nth-child(even) {
+    background-color: rgba(230, 230, 230, 0.9); /* Fondo alterno */
+}
+
+/* Estilo para las filas normales */
+#pokemon-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Efecto hover en las filas */
+#pokemon-table tr:hover {
+    background-color: #ddd; /* Fondo al pasar el mouse */
+}
+
+/* Forzar que las imágenes mantengan el tamaño */
+.pokemon-img {
+    width:60px !important;  /* Asegura que la imagen no se expanda más de lo necesario */
+    height:60px!important; /* Asegura que la imagen no se expanda más de lo necesario */
+    object-fit: contain; /* Ajusta la imagen para que encaje en la celda sin distorsionarse */
+}
